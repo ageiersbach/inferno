@@ -5,7 +5,9 @@ ENV LANG="en_US.UTF-8"
 
 ## Install Elixir
 RUN pacman -S --noconfirm elixir \
-                          erlang
+                          erlang \
+                          node   \
+                          npm
 
 ## Install Hex, the package manager for the Erlang ecosystem
 Run yes | mix local.hex
