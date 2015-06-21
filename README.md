@@ -2,10 +2,18 @@
 
 An Elixir/Phoenix App for live-reloading tests.
 
+##Getting Started
+
+This repository includes a Dockerfile to get the working example up and running quickly. To start:
+
+* Install Docker
+* Clone this repository
+* Build the docker image: docker build -t "inferno" .
+* Run the docker image: docker run -t -i "inferno" /bin/bash
+
 ##TODO:
 
-- Create Dockerfile
-- Install Elixir, Phoenix
+- Install Phoenix
 - Learn how websockets work in Elixir & Phoenix
 - ...
 - profit?
