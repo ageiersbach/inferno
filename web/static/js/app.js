@@ -1,4 +1,5 @@
 import {Socket} from "phoenix"
+import {Test} from "web/static/js/test"
 
 // let socket = new Socket("/ws")
 // socket.connect()
@@ -7,7 +8,12 @@ import {Socket} from "phoenix"
 //   console.log("Success!")
 // })
 
-let App = {
+var App = {
+  foo() {
+   let test = new Test();
+  }
 }
 
-export default App
+App.foo();
+
+export { App }

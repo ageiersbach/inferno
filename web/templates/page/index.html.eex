@@ -1,1 +1,15 @@
-Hello?
+<div class="test-path">
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="rootPath">Root path to test</label>
+      <input type="text" class="form-control" id="rootPath" placeholder="Root path">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="command">Command</label>
+      <input type="text" class="form-control" id="command" placeholder="Command">
+    </div>
+
+    <button type="button" class="btn btn-default" id="goCode">Go!</button>
+  </form>
+</div>
