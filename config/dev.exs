@@ -29,7 +29,7 @@ config :logger, :console, format: "[$level] $message\n"
 # Configure your database
 config :inferno, Inferno.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("PGUSR"),
+  password: System.get_env("PGPASS"),
   database: "inferno_dev",
   size: 10 # The amount of database connections in the pool
