@@ -17,17 +17,19 @@ defmodule Inferno.NoteController do
   end
 
   def create(conn, %{"note" => note_params}) do
-    changeset = Note.changeset(%Note{}, note_params)
-
-    if changeset.valid? do
-      Repo.insert(changeset)
-
-      conn
-      |> put_flash(:info, "Note created successfully.")
-      |> redirect(to: note_path(conn, :index))
-    else
-      render(conn, "new.html", changeset: changeset)
-    end
+    IO.puts "create reached"
+    conn
+    |> send_resp(200, "ok")
+#
+#     changeset = Note.changeset(%Note{}, note_params)
+#
+#     if changeset.valid? do
+#       Repo.insert(changeset)
+#       conn
+#       |> send_resp(200, "ok")
+#     else
+#       json conn, changeset
+#     end
   end
 
   def show(conn, %{"id" => id}) do
@@ -52,7 +54,7 @@ defmodule Inferno.NoteController do
       |> put_flash(:info, "Note updated successfully.")
       |> redirect(to: note_path(conn, :index))
     else
-      render(conn, "edit.html", note: note, changeset: changeset)
+      json(conn, note)
     end
   end
 

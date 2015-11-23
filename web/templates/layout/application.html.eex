@@ -9,13 +9,14 @@
 
     <title>Inferno</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </head>
 
   <body>
-    <div class="container" role="main">
+  <div class="container" role="main">
+    <a href="<%= page_path(@conn, :index) %>"><span class="logo"></span></a>
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="<%= page_path(@conn, :index) %>">Home</a></li>
           <li><a href="<%= note_path(@conn, :index) %>">Notes</a></li>
         </ul>
       </div>
@@ -26,7 +27,5 @@
       <%= @inner %>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-    <script>require("web/static/js/app").App.foo()</script>
   </body>
 </html>

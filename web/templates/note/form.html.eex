@@ -15,17 +15,13 @@
     <%= text_input f, :title, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group note-body">
     <label>Body</label>
     <%= textarea f, :body, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <label>SortOrder</label>
-    <%= number_input f, :sort_order, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+

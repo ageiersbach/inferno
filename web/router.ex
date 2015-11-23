@@ -12,11 +12,17 @@ defmodule Inferno.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/api", Inferno do
+    pipe_through :api
+
+    resources "/notes", NoteController, only: [:update, :create]
+  end
+
   scope "/", Inferno do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/notes", NoteController
+    resources "/notes", NoteController, only: [:index, :show, :new, :delete]
   end
 
   # Other scopes may use custom stacks.

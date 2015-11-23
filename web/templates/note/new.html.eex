@@ -1,6 +1,6 @@
-<h2>New note</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: note_path(@conn, :create) %>
-
+<h2 class="note-title">New note</h2>
+<div class="note-body">
+...
+</div>
 <%= link "Back", to: note_path(@conn, :index) %>
+<script>require("web/static/js/app").Note.run()</script>
