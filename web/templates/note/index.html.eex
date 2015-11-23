@@ -1,0 +1,24 @@
+<h2>Notes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for note <- @notes do %>
+    <tr>
+      <td><a href=<%= note_path(@conn, :edit, note) %>><%= note.title %></a></td>
+
+      <td class="text-right">
+        <%= link "Delete", to: note_path(@conn, :delete, note), method: :delete, class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New note", to: note_path(@conn, :new) %>

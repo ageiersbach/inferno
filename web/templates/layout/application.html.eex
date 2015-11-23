@@ -18,7 +18,6 @@
           <li><a href="<%= page_path(@conn, :index) %>">Home</a></li>
           <li><a href="<%= note_path(@conn, :index) %>">Notes</a></li>
         </ul>
-        <span class="logo"></span>
       </div>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

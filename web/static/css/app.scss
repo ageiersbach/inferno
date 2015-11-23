@@ -10,6 +10,8 @@
 body, form, ul, table {
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #222;
+  color: #fff;
 }
 
 /* Phoenix flash messages */
@@ -22,7 +24,12 @@ form.link, form.button {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  //border-bottom: 1px solid #e5e5e5;
+ .nav-pills li {
+    background-color: #ccc;
+    border-radius: 5px;
+ }
+ padding-bottom: 50px;
 }
 
 .logo {

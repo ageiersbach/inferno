@@ -1,0 +1,22 @@
+<h2>Show note</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @note.title %>
+  </li>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @note.body %>
+  </li>
+
+  <li>
+    <strong>SortOrder:</strong>
+    <%= @note.sort_order %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: note_path(@conn, :index) %>
